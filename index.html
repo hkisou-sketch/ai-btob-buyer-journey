@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI時代のBtoBバイヤージャーニー｜IDEATECH</title>
-<meta name="description" content="IDEATECHとエグゼクティブフェロー北川裕康による3回・延べ1,139名の共同調査をもとに、BtoB購買の流れを5段階で整理しました。">
+<meta name="description" content="生成AIで、BtoBの購買は変わっている。IDEATECHとエグゼクティブフェロー北川裕康による3回・延べ1,139名の共同調査をもとに、BtoB購買の流れを5段階で整理しました。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
@@ -236,6 +236,21 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 
 /* ポイント：1行に1つ */
+/* 冒頭の結論 */
+.verdict{margin-top:clamp(28px,4vw,40px);background:var(--head);color:var(--head-ink);border-radius:8px;padding:clamp(24px,4vw,40px) clamp(22px,4vw,40px);position:relative;overflow:hidden;border:1px solid var(--rule)}
+.verdict::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(to right,var(--s1),var(--s2),var(--s3),var(--s4),var(--s5))}
+.verdict-h{font-family:var(--serif);font-weight:800;font-size:clamp(28px,4.8vw,46px);line-height:1.4}
+.verdict-t{margin-top:16px;font-size:clamp(14.5px,1.7vw,16px);line-height:1.9;opacity:.92}
+.hero .lead{margin-top:24px}
+/* ポイント：3グループ */
+.groups{margin-top:36px;display:grid;gap:40px}
+.grp{border-left:4px solid var(--g);padding-left:clamp(16px,2.4vw,24px)}
+.grp-no{font-family:var(--serif);font-weight:800;font-size:40px;line-height:1;color:var(--g)}
+.grp-title{font-family:var(--serif);font-weight:800;font-size:clamp(20px,2.6vw,26px);line-height:1.5;margin-top:4px}
+.grp .stat-box{margin-top:14px}
+.grp .stat-box .headline-sub{margin-top:14px;font-size:13.5px}
+.grp .stat-box .fig-note{margin:12px 0 14px}
+.grp .wf{margin-top:12px}
 .pts-wrap{margin-top:60px}
 .pts-title{font-family:var(--serif);font-weight:800;font-size:clamp(20px,2.4vw,24px);line-height:1.5}
 .pts{margin-top:14px;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:4px 20px}
@@ -398,16 +413,16 @@ ul,ol{margin:0;padding:0;list-style:none}
   </div>
   <h1 class="title"><span>AI時代の</span><span class="l2">BtoB<wbr><span class="nw">バイヤージャーニー</span></span></h1>
   <p class="basis">3回・延べ1,139名の共同調査を基盤に整理</p>
+
+
+  <div class="verdict">
+    <p class="verdict-h">生成AIで、<br>BtoBの購買は変わっている。</p>
+    <p class="verdict-t">選定過程で9割が生成AIを使い、課題を整理する最初の段階では、生成AI・AI検索が最も参照される接点になっています。候補の7割以上は深掘り比較までに固まり、その先には、関与者の多い社内の合意形成が続きます。</p>
+  </div>
   <p class="lead">株式会社IDEATECHは、当社エグゼクティブフェローの北川裕康と2026年に実施した3回の共同調査をもとに、「生成AI時代のBtoBバイヤージャーニーマップ」を発表します。買い手が課題を認識してから、比較・選定、社内の意思決定に至るまでの過程を5段階で整理し、情報接点や最有力候補が固まった時期などの調査結果に、各段階で企業が提供すべき情報についての当社の見解を加えました。</p>
 
-  <figure class="headline-fig">
-    <p class="headline">大型IT購買の関与者502名の<span class="num">74.3<small>%</small></span>が、<br class="pc">深掘り比較までに最有力候補を決定</p>
-    <p class="headline-sub">最終的に採用した企業が、どの段階で最有力候補に固まったか。上から段階順に積み上げています。</p>
-    <div class="wf"><div class="wf-group"><ol class="wf-list"><li class="wf-row" style="--c:var(--s1);--o:0;--w:28.3"><span class="wf-label"><b>01</b>課題認識・整理<small>検討開始前 11.2%<br>＋この段階 17.1%</small></span><span class="wf-track"><span class="wf-seg pre" style="--o:0;--w:11.2"></span><span class="wf-seg" style="--o:11.2;--w:17.1"></span></span><span class="wf-val"><span class="num">28.3<small>%</small></span></span></li><li class="wf-row" style="--c:var(--s2);--o:28.3;--w:22.9"><span class="wf-label"><b>02</b>解決策・候補探索</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">22.9<small>%</small></span></span></li><li class="wf-row" style="--c:var(--s3);--o:51.2;--w:23.1"><span class="wf-label"><b>03</b>深掘り比較</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">23.1<small>%</small></span></span></li></ol><p class="wf-sum"><span class="wf-sum-l">01〜03の合計<small>深掘り比較までに最有力候補を決定</small></span><span class="num">74.3<small>%</small></span></p></div><ol class="wf-list" start="4"><li class="wf-row" style="--c:var(--s4);--o:74.3;--w:17.1"><span class="wf-label"><b>04</b>ベンダー確認・最終選定</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">17.1<small>%</small></span></span></li><li class="wf-row" style="--c:var(--s5);--o:91.4;--w:7.2"><span class="wf-label"><b>05</b>意思決定・稟議</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">7.2<small>%</small></span></span></li></ol></div>
-    <p class="fig-note">第3回調査（2026年8月・500万円以上のBtoB向けIT製品・サービスの購買に関与した502名）。最有力候補が固まることと、契約先が確定することは異なります。</p>
-  </figure>
-
   <nav class="toc" aria-label="ページ内の項目">
+    <a href="#points">調査から見えたポイント</a>
     <a href="#background">発表の背景</a>
     <a href="#surveys">3回の共同調査</a>
     <a href="#journey">5段階のバイヤージャーニー</a>
@@ -417,6 +432,36 @@ ul,ol{margin:0;padding:0;list-style:none}
 </header>
 
 <main>
+
+<section class="sec" id="points">
+  <div class="col">
+    <span class="sec-kicker">結論の根拠</span>
+    <h2 class="sec-title">調査から見えた、<br>3つのポイント</h2>
+    <div class="groups">
+      <article class="grp" style="--g:var(--s1)">
+        <p class="grp-no">1</p>
+        <h3 class="grp-title">生成AIは、検討の最初から使われている</h3>
+        <div class="stat-box"><p class="stat-base">第3回調査・回答者502名のうち</p><ul class="stat-list"><li><span class="num">90.6<small>%</small></span><p><span class="ga">が、</span>選定過程の少なくとも一部で、生成AIを利用した</p></li><li><span class="num">36.5<small>%</small></span><p><span class="ga">が、</span>「課題認識・整理」の段階で、主に「生成AI・AI検索」を参照した<small class="aside">この段階で最多の接点</small></p></li><li><span class="num">53.8<small>%</small></span><p><span class="ga">が、</span>自身または検討チームで、生成AIを使って候補企業・製品の比較表を作成した</p></li></ul></div>
+      </article>
+      <article class="grp" style="--g:var(--s3)">
+        <p class="grp-no">2</p>
+        <h3 class="grp-title">候補は、深掘り比較までに固まる</h3>
+        <div class="stat-box">
+          <p class="stat-base">第3回調査・回答者502名のうち</p>
+          <ul class="stat-list"><li><span class="num">74.3<small>%</small></span><p><span class="ga">が、</span>深掘り比較の段階までに、最終的に採用した企業を最有力候補に決めていた</p></li></ul>
+          <p class="headline-sub">最有力候補が固まった段階を、上から順に積み上げています。</p>
+          <div class="wf"><div class="wf-group"><ol class="wf-list"><li class="wf-row" style="--c:var(--s1);--o:0;--w:28.3"><span class="wf-label"><b>01</b>課題認識・整理<small>検討開始前 11.2%<br>＋この段階 17.1%</small></span><span class="wf-track"><span class="wf-seg pre" style="--o:0;--w:11.2"></span><span class="wf-seg" style="--o:11.2;--w:17.1"></span></span><span class="wf-val"><span class="num">28.3<small>%</small></span></span></li><li class="wf-row" style="--c:var(--s2);--o:28.3;--w:22.9"><span class="wf-label"><b>02</b>解決策・候補探索</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">22.9<small>%</small></span></span></li><li class="wf-row" style="--c:var(--s3);--o:51.2;--w:23.1"><span class="wf-label"><b>03</b>深掘り比較</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">23.1<small>%</small></span></span></li></ol><p class="wf-sum"><span class="wf-sum-l">01〜03の合計<small>深掘り比較までに最有力候補を決定</small></span><span class="num">74.3<small>%</small></span></p></div><ol class="wf-list" start="4"><li class="wf-row" style="--c:var(--s4);--o:74.3;--w:17.1"><span class="wf-label"><b>04</b>ベンダー確認・最終選定</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">17.1<small>%</small></span></span></li><li class="wf-row" style="--c:var(--s5);--o:91.4;--w:7.2"><span class="wf-label"><b>05</b>意思決定・稟議</span><span class="wf-track"><span class="wf-seg"></span></span><span class="wf-val"><span class="num">7.2<small>%</small></span></span></li></ol></div>
+          <p class="fig-note">最有力候補が固まることと、契約先が確定することは異なります。</p>
+        </div>
+      </article>
+      <article class="grp" style="--g:var(--s5)">
+        <p class="grp-no">3</p>
+        <h3 class="grp-title">決める前に、社内の合意形成に時間がかかる</h3>
+        <div class="stat-box"><p class="stat-base">第2回調査・主要設問の回答者325名のうち</p><ul class="stat-list"><li><span class="num">58.5<small>%</small></span><p><span class="ga">が、</span>7名以上で検討・意思決定を進めていた</p></li><li><span class="num">56.9<small>%</small></span><p><span class="ga">が、</span>必要な機能・要件の部門間調整で、合意形成に時間がかかった</p></li><li><span class="num">51.7<small>%</small></span><p><span class="ga">が、</span>予算規模・予算配分の社内調整で、合意形成に時間がかかった</p></li><li><span class="num">63.6<small>%</small></span><p><span class="ga">が、</span>長期化の理由に「経営層の判断が下りるまで時間がかかった」を挙げた<small class="aside">検討が長期化した239名のうち</small></p></li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section class="sec" id="background">
   <div class="col">
@@ -473,7 +518,7 @@ ul,ol{margin:0;padding:0;list-style:none}
         <p class="survey-when"><b>第3回</b>2026年8月<span class="num">502<small>名</small></span></p>
         <h3 class="survey-q">生成AIを使う買い手は、いつ候補を固めるのか</h3>
         <p class="survey-target">500万円以上のBtoB向けIT製品・サービスの購買に関与した方。段階別の情報接点、最有力候補が固まった時期、名前・連絡先を明かした時期、営業への相談時期などを調査</p>
-        <div class="stat-box"><p class="stat-base">回答者502名のうち</p><ul class="stat-list"><li><span class="num">90.6<small>%</small></span><p><span class="ga">が、</span>選定過程の少なくとも一部で、生成AIを利用した</p></li><li><span class="num">36.5<small>%</small></span><p><span class="ga">が、</span>「課題認識・整理」の段階で、主に「生成AI・AI検索」を参照した<small class="aside">最多の接点</small></p></li><li><span class="num">53.8<small>%</small></span><p><span class="ga">が、</span>自身または検討チームで、生成AIを使って候補企業・製品の比較表を作成した</p></li></ul></div>
+        <div class="stat-box"><p class="stat-base">回答者502名のうち</p><ul class="stat-list"><li><span class="num">84.7<small>%</small></span><p><span class="ga">が、</span>候補企業の資料・価格・導入事例などを見たいと思いながら、フォームに入力せず情報収集を続けた経験がある</p></li><li><span class="num">29.7<small>%</small></span><p><span class="ga">が、</span>「解決策や製品カテゴリを調べていた段階」で、初めて営業に本格的に相談した<small class="aside">最多</small></p></li><li><span class="num">56.8<small>%</small></span><p><span class="ga">が、</span>営業に本格的に相談する前に、「具体的な価格・料金体系・見積条件」を用意してほしかった</p></li></ul></div>
         <p class="survey-take">この第3回調査の結果をもとに、購買の流れを5段階のバイヤージャーニーとして整理しました。</p>
       </li>
     </ol>
@@ -635,10 +680,6 @@ ul,ol{margin:0;padding:0;list-style:none}
       </li>
     </ol>
 
-    <div class="pts-wrap">
-      <h3 class="pts-title">調査から見えたポイント</h3>
-      <ul class="pts"><li class="pt"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-bg" cx="50" cy="50" r="40" fill="none" stroke-width="13"/><circle class="ring-fg" cx="50" cy="50" r="40" fill="none" stroke-width="13" stroke-dasharray="227.7 251.33" transform="rotate(-90 50 50)"/></svg><span class="num">90.6<small>%</small></span><p>が選定過程で生成AIを利用<span class="src">第3回</span></p></li><li class="pt"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-bg" cx="50" cy="50" r="40" fill="none" stroke-width="13"/><circle class="ring-fg" cx="50" cy="50" r="40" fill="none" stroke-width="13" stroke-dasharray="135.2 251.33" transform="rotate(-90 50 50)"/></svg><span class="num">53.8<small>%</small></span><p>が生成AIを使った比較表を作成<span class="src">第3回</span></p></li><li class="pt"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-bg" cx="50" cy="50" r="40" fill="none" stroke-width="13"/><circle class="ring-fg" cx="50" cy="50" r="40" fill="none" stroke-width="13" stroke-dasharray="147.0 251.33" transform="rotate(-90 50 50)"/></svg><span class="num">58.5<small>%</small></span><p>が7名以上で意思決定<span class="src">第2回</span></p></li><li class="pt"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-bg" cx="50" cy="50" r="40" fill="none" stroke-width="13"/><circle class="ring-fg" cx="50" cy="50" r="40" fill="none" stroke-width="13" stroke-dasharray="143.0 251.33" transform="rotate(-90 50 50)"/></svg><span class="num">56.9<small>%</small></span><p>が部門間の要件調整に時間<span class="src">第2回</span></p></li><li class="pt"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-bg" cx="50" cy="50" r="40" fill="none" stroke-width="13"/><circle class="ring-fg" cx="50" cy="50" r="40" fill="none" stroke-width="13" stroke-dasharray="129.9 251.33" transform="rotate(-90 50 50)"/></svg><span class="num">51.7<small>%</small></span><p>が予算規模・予算配分の調整に時間<span class="src">第2回</span></p></li><li class="pt"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-bg" cx="50" cy="50" r="40" fill="none" stroke-width="13"/><circle class="ring-fg" cx="50" cy="50" r="40" fill="none" stroke-width="13" stroke-dasharray="159.8 251.33" transform="rotate(-90 50 50)"/></svg><span class="num">63.6<small>%</small></span><p>が経営層の判断待ちで長期化<span class="src">第2回・長期化した239名</span></p></li></ul>
-    </div>
   </div>
 </section>
 
