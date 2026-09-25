@@ -153,19 +153,54 @@ ul,ol{margin:0;padding:0;list-style:none}
 .survey-take::before{content:"";display:inline-block;width:18px;height:2px;background:var(--blue);vertical-align:.35em;margin-right:10px}
 
 /* ---------- journey ---------- */
-.genai{margin-top:40px;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:24px clamp(18px,3vw,32px) 20px}
-.genai-title{font-weight:700;font-size:15.5px}
-.genai-title span{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}
-.genai-chart{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,2vw,28px);height:210px;margin-top:18px;padding-left:34px;align-items:end}
-.genai-grid{position:absolute;inset:0 0 0 34px;pointer-events:none}
-.genai-grid i{position:absolute;left:0;right:0;border-top:1px solid var(--track);font-style:normal}
-.genai-grid i::before{content:attr(data-v);position:absolute;left:-34px;top:-.7em;font-size:11px;color:var(--muted);font-family:var(--fig);font-weight:600}
-.gcol{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
-.gbar{width:min(64px,70%);background:var(--c);border-radius:3px 3px 0 0;position:relative}
-.gbar .num{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);font-size:19px;white-space:nowrap}
-.genai-x{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,2vw,28px);padding-left:34px;margin-top:8px}
-.genai-x span{font-size:12.5px;line-height:1.45;text-align:center;color:var(--ink-2)}
-.genai-x b{display:block;font-family:var(--serif);font-size:16px;color:var(--c)}
+.map{margin-top:40px;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:24px clamp(16px,3vw,32px) 22px;--gut:44px}
+.map-title{font-family:var(--serif);font-weight:800;font-size:clamp(18px,2.2vw,22px);line-height:1.5}
+.map-row{display:grid;grid-template-columns:var(--gut) repeat(5,minmax(0,1fr));gap:0 6px}
+.map-row.chev{margin-top:18px}
+.mchev{background:var(--c);color:#fff;min-height:54px;display:flex;align-items:center;gap:8px;padding:6px 20px 6px 12px;
+  clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,10px 50%)}
+.mchev:first-of-type{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
+.mchev b{font-family:var(--serif);font-weight:800;font-size:22px;line-height:1;opacity:.9}
+.mchev span{font-size:13px;font-weight:700;line-height:1.35}
+.lane{margin-top:26px;padding-top:18px;border-top:1px solid var(--track)}
+.lane-title{font-weight:700;font-size:15px;line-height:1.55;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.lane-title::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--blue);align-self:center}
+.lane-cap{font-size:12.5px;color:var(--muted);line-height:1.65;margin-top:2px}
+.plot{position:relative;height:170px;margin-top:10px}
+.plot-in{position:absolute;top:0;bottom:0;left:calc(var(--gut) + 6px);right:0}
+.plot-in svg.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.gut-lbl{position:absolute;left:0;width:var(--gut);font-size:11px;font-weight:700;color:var(--muted);line-height:1.3}
+.gut-lbl.top{top:4px}.gut-lbl.bot{bottom:4px}
+.gut-arrow{position:absolute;left:8px;top:26px;bottom:26px;width:2px;background:linear-gradient(to bottom,var(--track),var(--muted))}
+.emo{position:absolute;top:calc((100% - 78px) * var(--y));left:var(--x);transform:translateX(-50%);width:84px;text-align:center}
+.emo .face{width:44px;height:44px;display:block;margin:0 auto}
+.emo b{display:block;font-size:12.5px;line-height:1.35;margin-top:4px}
+.face .fb{fill:var(--card);fill:color-mix(in srgb,var(--c) 14%,var(--card));stroke:var(--c);stroke-width:3}
+.face .ff{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.face .fe{fill:var(--ink);stroke:none}
+.face .fd{fill:#6FA8E6;stroke:none}
+.plot.chart{height:190px}
+.chart .plot-in{top:30px;bottom:12px}
+.chart .gl{position:absolute;left:0;right:0;border-top:1px solid var(--track);font-style:normal}
+.chart .gl::before{content:attr(data-v);position:absolute;left:calc(-1 * var(--gut) - 6px);top:-.72em;width:var(--gut);text-align:right;padding-right:8px;font-size:11px;color:var(--muted);font-family:var(--fig);font-weight:600}
+.dot{position:absolute;left:var(--x);top:var(--y);width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--c);border:3px solid var(--card);box-shadow:0 0 0 1px var(--c)}
+.dot .num{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);font-size:19px;white-space:nowrap}
+.rank{margin-top:8px}
+.rank span{text-align:center;font-size:12px;color:var(--ink-2);line-height:1.4}
+.rank b{display:inline-block;font-family:var(--fig);font-size:15px;color:var(--ink);border:1px solid var(--rule);border-radius:3px;padding:0 .5em;margin-top:2px}
+.rank .top b{background:var(--blue);border-color:var(--blue);color:#fff}
+.rank .gut-cell{font-size:11px;color:var(--muted);text-align:left;font-weight:700}
+.map-note{margin-top:18px;font-size:12px;color:var(--muted)}
+.chev-names{margin-top:6px}
+.chev-names span{font-size:9.5px;line-height:1.35;text-align:center;font-weight:700;color:var(--c);letter-spacing:-.04em}
+
+.voice{display:flex;gap:14px;align-items:flex-start;margin-top:14px;max-width:760px}
+.voice .face{width:52px;height:52px;flex:none}
+.voice-bubble{position:relative;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px}
+.voice-bubble::before{content:"";position:absolute;left:-7px;top:18px;width:12px;height:12px;background:var(--card);border-left:1px solid var(--rule);border-bottom:1px solid var(--rule);transform:rotate(45deg)}
+.voice-mood{font-size:12px;font-weight:700;color:var(--c)}
+.voice-q{font-family:var(--serif);font-weight:700;font-size:17px;line-height:1.6;margin-top:2px}
+.voice-basis{font-size:12.5px;color:var(--muted);line-height:1.65;margin-top:6px}
 
 .stages{position:relative;margin-top:52px}
 .stages::before{
@@ -351,12 +386,27 @@ td.nw{white-space:nowrap}
   .stage{padding-left:44px}
   .stage::before{left:4px;width:24px;height:24px;border-width:6px}
   .stage-body{grid-template-columns:minmax(0,1fr)}
-  .genai-chart{height:170px;padding-left:28px}
-  .genai-grid{left:28px}
-  .genai-grid i::before{left:-28px}
-  .genai-x{padding-left:28px}
-  .gbar .num{font-size:15px}
-  .genai-x span{font-size:10.5px;letter-spacing:-.03em}
+  .map{--gut:30px;padding-inline:12px}
+  .map-row{gap:0 3px}
+  .mchev{min-height:34px;justify-content:center;padding:4px 10px 4px 12px}
+  .mchev:first-of-type{padding-left:6px}
+  .mchev span{display:none}
+  .mchev b{font-size:16px}
+  .chev-names{display:grid!important}
+  .emo{width:62px}
+  .emo .face{width:34px;height:34px;margin-top:5px}
+  .emo b{font-size:10.5px;margin-top:6px}
+  .gut-lbl{font-size:9.5px}
+  .gut-arrow{left:5px}
+  .dot{width:14px;height:14px;margin:-7px 0 0 -7px;border-width:2px}
+  .dot .num{font-size:14px;bottom:calc(100% + 5px)}
+  .dot .num small{font-size:.6em}
+  .chart .gl::before{font-size:9.5px;padding-right:4px}
+  .rank span{font-size:10px}
+  .rank b{font-size:12px;padding:0 .35em}
+  .rank .gut-cell{font-size:9.5px}
+  .voice .face{width:42px;height:42px}
+  .voice-q{font-size:15.5px}
   .title{font-size:36px}
   br.pc{display:none}
   .points-list{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -520,26 +570,42 @@ td.nw{white-space:nowrap}
   <div class="wrap">
     <span class="sec-kicker">バイヤージャーニーマップ</span>
     <h2 class="sec-title">5段階で見る、<br>AI時代のBtoBバイヤージャーニー</h2>
-    <p class="sec-intro">第3回調査の段階別の情報接点と、最有力候補が固まった時期をもとに、購買の流れを5段階で整理しました。各段階の「届けたい情報」は、調査結果をふまえた当社の見解です。</p>
+    <p class="sec-intro">第3回調査の段階別の情報接点と、最有力候補が固まった時期をもとに、購買の流れを5段階で整理しました。各段階の「買い手の気持ち」と「届けたい情報」は、調査結果をふまえた当社の見解です。</p>
 
-    <div class="genai" role="img" aria-label="生成AI・AI検索を主な情報接点とした割合。課題認識・整理36.5%、解決策・候補探索20.5%、深掘り比較18.9%、ベンダー確認・最終選定16.7%、意思決定・稟議18.5%。">
-      <p class="genai-title">「生成AI・AI検索」を主な情報接点とした割合<span>第3回調査・段階別</span></p>
-      <div class="genai-chart" aria-hidden="true">
-        <div class="genai-grid">
-          <i data-v="40%" style="top:0"></i><i data-v="30%" style="top:25%"></i><i data-v="20%" style="top:50%"></i><i data-v="10%" style="top:75%"></i><i data-v="0%" style="top:100%"></i>
+    <div class="map">
+      <h3 class="map-title">バイヤージャーニーマップ</h3>
+      <div class="map-row chev" aria-hidden="true"><span></span><div class="mchev" style="--c:var(--s1)"><b>01</b><span>課題認識・整理</span></div><div class="mchev" style="--c:var(--s2)"><b>02</b><span>解決策・候補探索</span></div><div class="mchev" style="--c:var(--s3)"><b>03</b><span>深掘り比較</span></div><div class="mchev" style="--c:var(--s4)"><b>04</b><span>ベンダー確認・最終選定</span></div><div class="mchev" style="--c:var(--s5)"><b>05</b><span>意思決定・稟議</span></div></div>
+      <div class="map-row chev-names" aria-hidden="true" style="display:none"><span></span><span style="--c:var(--s1)">課題認識・<wbr>整理</span><span style="--c:var(--s2)">解決策・<wbr>候補探索</span><span style="--c:var(--s3)">深掘り比較</span><span style="--c:var(--s4)">ベンダー<wbr>確認・<wbr>最終選定</span><span style="--c:var(--s5)">意思決定・<wbr>稟議</span></div>
+
+      <div class="lane" role="img" aria-label="買い手の気持ちの推移（IDEATECHの解釈）：課題認識・整理は手探り、解決策・候補探索は慎重、深掘り比較は迷い、ベンダー確認・最終選定は期待と不安、意思決定・稟議は負担。">
+        <p class="lane-title">買い手の気持ち</p>
+        <p class="lane-cap">調査結果をもとにした、IDEATECHの解釈です。各段階の根拠データは下の詳細に記載しています。</p>
+        <div class="plot" aria-hidden="true">
+          <span class="gut-lbl top">前向き</span><span class="gut-arrow"></span><span class="gut-lbl bot">負担</span>
+          <div class="plot-in">
+            <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs><linearGradient id="gEmo" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="var(--s1)"/><stop offset=".5" stop-color="var(--s3)"/><stop offset="1" stop-color="var(--s5)"/></linearGradient></defs>
+              <path d="M10.00 22.68 C13.33 24.67 23.33 29.54 30.00 34.59 C36.67 39.64 43.33 51.55 50.00 52.99 C56.67 54.43 63.33 40.90 70.00 43.25 C76.67 45.59 86.67 63.09 90.00 67.06" fill="none" stroke="url(#gEmo)" stroke-width="2" stroke-opacity=".55" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <div class="emo" style="--c:var(--s1);--x:10%;--y:0.18"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M14 15.5 Q17 14 20 15.5"/><path d="M28 13.5 Q31.5 11.5 35 13.5"/><circle class="fe" cx="18" cy="20" r="2.4"/><circle class="fe" cx="32" cy="20" r="2.4"/><path d="M18.5 31 Q24 34 29.5 31"/></g></svg><b>手探り</b></div><div class="emo" style="--c:var(--s2);--x:30%;--y:0.40"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M14 15.5 L20 15.5"/><path d="M28 15.5 L34 15.5"/><circle class="fe" cx="19" cy="21.5" r="2.4"/><circle class="fe" cx="33" cy="21.5" r="2.4"/><path d="M19 32 L30 32"/></g></svg><b>慎重</b></div><div class="emo" style="--c:var(--s3);--x:50%;--y:0.74"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M13.5 17 L20 14.2"/><path d="M28 14.2 L34.5 17"/><circle class="fe" cx="17" cy="21.5" r="2.4"/><circle class="fe" cx="31" cy="21.5" r="2.4"/><path d="M15.5 32 Q17.6 29.6 19.7 32 T23.9 32 T28.1 32 T32.3 32"/></g></svg><b>迷い</b></div><div class="emo" style="--c:var(--s4);--x:70%;--y:0.56"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M14 15.5 Q17 13.8 20 15.5"/><path d="M28 15.5 Q31 13.8 34 15.5"/><circle class="fe" cx="17" cy="21.5" r="2.4"/><circle class="fe" cx="31" cy="21.5" r="2.4"/><path d="M18 30.5 Q24 34.5 30 30.5"/><path class="fd" d="M42.5 2 C39.6 7.6 39.2 11.4 42.5 12.2 C45.8 11.4 45.4 7.6 42.5 2Z"/></g></svg><b>期待と不安</b></div><div class="emo" style="--c:var(--s5);--x:90%;--y:1.00"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M13.5 17 L20 14.2"/><path d="M28 14.2 L34.5 17"/><circle class="fe" cx="17" cy="21.5" r="2.4"/><circle class="fe" cx="31" cy="21.5" r="2.4"/><path d="M17 34 Q24 28.3 31 34"/><path class="fd" d="M42.5 2 C39.6 7.6 39.2 11.4 42.5 12.2 C45.8 11.4 45.4 7.6 42.5 2Z"/></g></svg><b>負担</b></div>
+          </div>
         </div>
-        <div class="gcol"><div class="gbar" style="--c:var(--s1);height:91.25%"><span class="num">36.5<small>%</small></span></div></div>
-        <div class="gcol"><div class="gbar" style="--c:var(--s2);height:51.25%"><span class="num">20.5<small>%</small></span></div></div>
-        <div class="gcol"><div class="gbar" style="--c:var(--s3);height:47.25%"><span class="num">18.9<small>%</small></span></div></div>
-        <div class="gcol"><div class="gbar" style="--c:var(--s4);height:41.75%"><span class="num">16.7<small>%</small></span></div></div>
-        <div class="gcol"><div class="gbar" style="--c:var(--s5);height:46.25%"><span class="num">18.5<small>%</small></span></div></div>
       </div>
-      <div class="genai-x" aria-hidden="true">
-        <span style="--c:var(--s1)"><b>01</b>課題認識・整理</span>
-        <span style="--c:var(--s2)"><b>02</b>解決策・候補探索</span>
-        <span style="--c:var(--s3)"><b>03</b>深掘り比較</span>
-        <span style="--c:var(--s4)"><b>04</b>ベンダー確認・最終選定</span>
-        <span style="--c:var(--s5)"><b>05</b>意思決定・稟議</span>
+
+      <div class="lane" role="img" aria-label="各段階で最も参照した情報接点として「生成AI・AI検索」を挙げた人の割合：課題認識・整理36.5%（接点の中で1位）、解決策・候補探索20.5%（3位）、深掘り比較18.9%（3位）、ベンダー確認・最終選定16.7%（2位）、意思決定・稟議18.5%（2位）。">
+        <p class="lane-title">いちばん参照した接点が「AI検索」だった人の割合</p>
+        <p class="lane-cap">各段階で最も参照した情報接点として、「生成AI・AI検索」を挙げた人の割合（第3回調査）</p>
+        <div class="plot chart" aria-hidden="true">
+          <div class="plot-in">
+            <i class="gl" data-v="40%" style="top:0%"></i><i class="gl" data-v="30%" style="top:25%"></i><i class="gl" data-v="20%" style="top:50%"></i><i class="gl" data-v="10%" style="top:75%"></i><i class="gl" data-v="0%" style="top:100%"></i>
+            <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs><linearGradient id="gAi" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="var(--s1)"/><stop offset=".5" stop-color="var(--s3)"/><stop offset="1" stop-color="var(--s5)"/></linearGradient></defs>
+              <polyline points="10,8.75 30,48.75 50,52.75 70,58.25 90,53.75" fill="none" stroke="url(#gAi)" stroke-width="3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <span class="dot" style="--c:var(--s1);--x:10%;--y:8.75%"><span class="num">36.5<small>%</small></span></span><span class="dot" style="--c:var(--s2);--x:30%;--y:48.75%"><span class="num">20.5<small>%</small></span></span><span class="dot" style="--c:var(--s3);--x:50%;--y:52.75%"><span class="num">18.9<small>%</small></span></span><span class="dot" style="--c:var(--s4);--x:70%;--y:58.25%"><span class="num">16.7<small>%</small></span></span><span class="dot" style="--c:var(--s5);--x:90%;--y:53.75%"><span class="num">18.5<small>%</small></span></span>
+          </div>
+        </div>
+        <div class="map-row rank" aria-hidden="true"><span class="gut-cell">接点の<br>順位</span><span class="top"><b>1位</b></span><span class=""><b>3位</b></span><span class=""><b>3位</b></span><span class=""><b>2位</b></span><span class=""><b>2位</b></span></div>
       </div>
     </div>
 
@@ -548,6 +614,7 @@ td.nw{white-space:nowrap}
       <li class="stage" style="--c:var(--s1)">
         <div class="stage-head"><span class="stage-no">01</span><h3 class="stage-name">課題認識・整理</h3></div>
         <p class="stage-desc">課題や要件を整理する</p>
+        <div class="voice"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M14 15.5 Q17 14 20 15.5"/><path d="M28 13.5 Q31.5 11.5 35 13.5"/><circle class="fe" cx="18" cy="20" r="2.4"/><circle class="fe" cx="32" cy="20" r="2.4"/><path d="M18.5 31 Q24 34 29.5 31"/></g></svg><div class="voice-bubble"><span class="voice-mood">買い手の気持ち｜手探り</span><p class="voice-q">「まずはAIに聞いて、自分たちの課題を整理しておきたい」</p><p class="voice-basis">根拠｜この段階で最も参照された接点は「生成AI・AI検索」36.5%（第3回）。営業と本格的にやり取りする時点で、課題の明確化が進んでいた人は70.4%（第1回）。</p></div></div>
         <div class="stage-body">
           <div class="panel">
             <p class="panel-head">主な情報接点</p>
@@ -578,6 +645,7 @@ td.nw{white-space:nowrap}
       <li class="stage" style="--c:var(--s2)">
         <div class="stage-head"><span class="stage-no">02</span><h3 class="stage-name">解決策・候補探索</h3></div>
         <p class="stage-desc">解決策や候補を探す</p>
+        <div class="voice"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M14 15.5 L20 15.5"/><path d="M28 15.5 L34 15.5"/><circle class="fe" cx="19" cy="21.5" r="2.4"/><circle class="fe" cx="33" cy="21.5" r="2.4"/><path d="M19 32 L30 32"/></g></svg><div class="voice-bubble"><span class="voice-mood">買い手の気持ち｜慎重</span><p class="voice-q">「検討していることは、まだ営業に知られたくない」</p><p class="voice-basis">根拠｜フォームに入力しなかった理由の最多は「検討していることをまだ知られたくなかったから」44.7%（第3回・未入力の経験がある425名）。</p></div></div>
         <div class="stage-body">
           <div class="panel">
             <p class="panel-head">主な情報接点</p>
@@ -609,6 +677,7 @@ td.nw{white-space:nowrap}
       <li class="stage" style="--c:var(--s3)">
         <div class="stage-head"><span class="stage-no">03</span><h3 class="stage-name">深掘り比較</h3></div>
         <p class="stage-desc">比較して有力候補を絞り込む</p>
+        <div class="voice"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M13.5 17 L20 14.2"/><path d="M28 14.2 L34.5 17"/><circle class="fe" cx="17" cy="21.5" r="2.4"/><circle class="fe" cx="31" cy="21.5" r="2.4"/><path d="M15.5 32 Q17.6 29.6 19.7 32 T23.9 32 T28.1 32 T32.3 32"/></g></svg><div class="voice-bubble"><span class="voice-mood">買い手の気持ち｜迷い</span><p class="voice-q">「結局いくらかかるのか、うちに合うのかが知りたい」</p><p class="voice-basis">根拠｜営業に本格的に相談する前に用意してほしかった情報は「具体的な価格・料金体系・見積条件」56.8%、「自社に合うかを判断できる比較表・選定ガイド」48.0%（第3回）。</p></div></div>
         <div class="stage-body">
           <div class="panel">
             <p class="panel-head">主な情報接点</p>
@@ -631,7 +700,7 @@ td.nw{white-space:nowrap}
             <p class="panel-head">IDEATECHの見解｜この段階で届けたい情報</p>
             <div class="panel-body">
               <ul><li>価格・料金体系・見積条件</li><li>比較表・選定ガイド</li><li>業種・規模が近い企業の導入事例</li></ul>
-              <p>営業に本格的に相談する前に用意してほしかった情報の上位3項目（第3回）。適する顧客や利用条件まで判断できる内容にする。</p>
+              <p>適する顧客や利用条件まで、買い手が自分で判断できる内容にする。</p>
             </div>
           </div>
         </div>
@@ -640,6 +709,7 @@ td.nw{white-space:nowrap}
       <li class="stage" style="--c:var(--s4)">
         <div class="stage-head"><span class="stage-no">04</span><h3 class="stage-name">ベンダー確認・最終選定</h3></div>
         <p class="stage-desc">提案・見積もり・デモで適合性を確かめる</p>
+        <div class="voice"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M14 15.5 Q17 13.8 20 15.5"/><path d="M28 15.5 Q31 13.8 34 15.5"/><circle class="fe" cx="17" cy="21.5" r="2.4"/><circle class="fe" cx="31" cy="21.5" r="2.4"/><path d="M18 30.5 Q24 34.5 30 30.5"/><path class="fd" d="M42.5 2 C39.6 7.6 39.2 11.4 42.5 12.2 C45.8 11.4 45.4 7.6 42.5 2Z"/></g></svg><div class="voice-bubble"><span class="voice-mood">買い手の気持ち｜期待と不安</span><p class="voice-q">「導入したあと、本当に自社で運用できるのかを確かめたい」</p><p class="voice-basis">根拠｜社内検討で判断が難しかった項目の最多は「導入後の運用負荷の見積もり」56.3%（第2回・営業との接触前）。</p></div></div>
         <div class="stage-body">
           <div class="panel">
             <p class="panel-head">主な情報接点</p>
@@ -671,6 +741,7 @@ td.nw{white-space:nowrap}
       <li class="stage" style="--c:var(--s5)">
         <div class="stage-head"><span class="stage-no">05</span><h3 class="stage-name">意思決定・稟議</h3></div>
         <p class="stage-desc">社内説明と承認を経て決定する</p>
+        <div class="voice"><svg class="face" viewBox="0 0 48 48" aria-hidden="true"><circle class="fb" cx="24" cy="24" r="21"/><g class="ff"><path d="M13.5 17 L20 14.2"/><path d="M28 14.2 L34.5 17"/><circle class="fe" cx="17" cy="21.5" r="2.4"/><circle class="fe" cx="31" cy="21.5" r="2.4"/><path d="M17 34 Q24 28.3 31 34"/><path class="fd" d="M42.5 2 C39.6 7.6 39.2 11.4 42.5 12.2 C45.8 11.4 45.4 7.6 42.5 2Z"/></g></svg><div class="voice-bubble"><span class="voice-mood">買い手の気持ち｜負担</span><p class="voice-q">「社内の調整と承認が、なかなか進まない」</p><p class="voice-basis">根拠｜合意形成に時間がかかったのは「必要な機能・要件についての部門間調整」56.9%。検討が長期化した239名の63.6%が「経営層の判断が下りるまで時間がかかったから」と回答（第2回）。</p></div></div>
         <div class="stage-body">
           <div class="panel">
             <p class="panel-head">主な情報接点</p>
