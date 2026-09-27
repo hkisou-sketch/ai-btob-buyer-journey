@@ -101,9 +101,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 .wf-group + .wf-list{margin-inline:0}
 .fig-note{margin-top:16px;font-size:12.5px;color:var(--muted);line-height:1.7}
 
-.toc{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:28px}
-.toc a{display:inline-block;font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--rule);background:var(--card);padding:.35em 1em;border-radius:999px}
-.toc a:hover{border-color:var(--ink)}
 
 /* ---------- sections ---------- */
 .sec{padding-block:clamp(60px,8vw,92px);border-top:1px solid var(--rule)}
@@ -307,6 +304,12 @@ ul,ol{margin:0;padding:0;list-style:none}
 .fellow-role{font-size:13.5px;color:var(--muted);font-weight:700}
 .fellow-name{font-family:var(--serif);font-weight:800;font-size:28px;line-height:1.3;margin-top:2px}
 .fellow p.bio{margin-top:12px;font-size:15px;color:var(--ink-2)}
+.career-title{font-size:13.5px;font-weight:700;color:var(--muted);margin-top:18px}
+.career{margin-top:6px;border-top:1px solid var(--rule)}
+.career li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2)}
+.career li b{font-weight:500;color:var(--ink)}
+@media (max-width:600px){.career li{grid-template-columns:minmax(0,1fr)}}
+.fellow .survey-link{margin-top:14px}
 .pillar{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:20px 24px;margin-top:14px}
 .pillar h3{font-family:var(--serif);font-weight:800;font-size:21px;line-height:1.45}
 .pillar h3 small{display:block;font-family:var(--sans);font-size:12.5px;font-weight:500;color:var(--muted);margin-top:2px}
@@ -336,8 +339,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 .foot a{color:inherit}
 .foot h2{font-family:var(--serif);font-weight:800;font-size:21px;margin-bottom:14px}
 .foot-block + .foot-block{margin-top:40px}
-.contact-box{border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:20px 24px;font-size:14.5px;line-height:1.9}
-.contact-box b{display:block;font-size:15px;margin-bottom:4px}
 .co{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:6px 14px;font-size:14px;line-height:1.75}
 .co dt{opacity:.7}
 .co dd{margin:0}
@@ -421,22 +422,12 @@ ul,ol{margin:0;padding:0;list-style:none}
     <p class="verdict-t">選定過程で9割が生成AIを使い、課題を整理する最初の段階では、生成AI・AI検索が最も参照される接点になっています。候補の7割以上は深掘り比較までに固まり、その先には、関与者の多い社内の合意形成が続きます。</p>
   </div>
   <p class="lead">株式会社IDEATECHは、当社エグゼクティブフェローの北川裕康と2026年に実施した3回の共同調査をもとに、「生成AI時代のBtoBバイヤージャーニーマップ」を発表します。買い手が課題を認識してから、比較・選定、社内の意思決定に至るまでの過程を5段階で整理し、情報接点や最有力候補が固まった時期などの調査結果に、各段階で企業が提供すべき情報についての当社の見解を加えました。</p>
-
-  <nav class="toc" aria-label="ページ内の項目">
-    <a href="#points">調査から見えたポイント</a>
-    <a href="#background">発表の背景</a>
-    <a href="#surveys">3回の共同調査</a>
-    <a href="#journey">5段階のバイヤージャーニー</a>
-    <a href="#findings">「情報提供」のあり方</a>
-    <a href="#method">調査の概要</a>
-  </nav>
 </header>
 
 <main>
 
 <section class="sec" id="points">
   <div class="col">
-    <span class="sec-kicker">結論の根拠</span>
     <h2 class="sec-title">調査から見えた、<br>3つのポイント</h2>
     <div class="groups">
       <article class="grp" style="--g:var(--s1)">
@@ -789,6 +780,15 @@ ul,ol{margin:0;padding:0;list-style:none}
         <p class="fellow-role">IDEATECH エグゼクティブフェロー</p>
         <h2 class="fellow-name">北川 裕康</h2>
         <p class="bio">マイクロソフトやシスコシステムズ等の役員・本部長を歴任。エンジニア出身としてプロダクト、マーケティングやセールスオペレーションを牽引後、2023年に独立しIT・AI企業のGTM戦略、事業開発などを支援。2026年よりIDEATECHのエグゼクティブフェローを務める。</p>
+        <h3 class="career-title">主な歴任役職</h3>
+        <ul class="career">
+          <li><b>マイクロソフト株式会社（現・日本マイクロソフト株式会社）</b>業務執行役員</li>
+          <li><b>シスコシステムズ合同会社</b>マーケティング本部長</li>
+          <li><b>SAS Institute Japan株式会社</b>業務執行役員</li>
+          <li><b>AI inside 株式会社</b>執行役員 CPO（Chief Product Officer）</li>
+          <li><b>株式会社RevComm</b>マーケティング本部長</li>
+        </ul>
+        <p class="survey-link"><a href="https://prtimes.jp/main/html/rd/p/000000712.000045863.html" target="_blank" rel="noopener noreferrer">エグゼクティブフェロー就任のお知らせを見る（PR TIMES）</a></p>
       </div>
     </div>
   </div>
@@ -798,11 +798,11 @@ ul,ol{margin:0;padding:0;list-style:none}
   <div class="col">
     <span class="sec-kicker">IDEATECHの取り組み</span>
     <h2 class="sec-title">顧客の意思決定支援と、<br>生成AIへの対応を一体で設計</h2>
-    <p class="sec-intro">IDEATECHは、AI時代のカスタマージャーニーをもとに、顧客の意思決定を後押しするマーケティング・アセットを設計・制作することを事業の方針としています。</p>
+    <p class="sec-intro">IDEATECHは、AI時代のカスタマージャーニーをもとに、カスタマーの意思決定を後押しするマーケティング・アセットを設計・制作することを事業の方針としています。</p>
     <div class="pillars">
       <div class="pillar">
         <h3>マーケティング・アセット<small>顧客の判断を継続的に支える情報資産</small></h3>
-        <p>調査レポート、白書、比較ガイド、事例、営業資料などを、継続的に顧客の判断を支える情報資産として設計します。</p>
+        <p>調査レポート、白書、ベストプラクティスガイド、レポート、事例やユースケースコンテンツなどを、継続的に顧客の判断を支える情報資産として設計します。</p>
       </div>
       <div class="pillar">
         <h3>LLMO<small>Large Language Model Optimization（大規模言語モデル最適化）</small></h3>
@@ -830,6 +830,7 @@ ul,ol{margin:0;padding:0;list-style:none}
     <ul class="refs">
       <li><span class="refs-meta">第1回調査｜PR TIMES｜2026年4月16日</span><a href="https://prtimes.jp/main/html/rd/p/000000629.000045863.html" target="_blank" rel="noopener noreferrer">【BtoB大型購買の実態調査】営業接触前に購買プロセスの約4割が完了、約7割が課題明確化済み候補選定の決め手は「業界特化情報」が6割超、機能不足で4割が候補外に</a></li>
       <li><span class="refs-meta">第2回調査｜PR TIMES｜2026年6月9日</span><a href="https://prtimes.jp/main/html/rd/p/000000657.000045863.html" target="_blank" rel="noopener noreferrer">日本のBtoB大型購買・バイヤー・イネーブルメント調査｜購買検討段階で、約6割が「ROI計算シミュレーター」「運用負荷の見積もり」を有用と評価 一方、約半数が「機能比較表」は購買に影響しないと回答</a></li>
+      <li><span class="refs-meta">エグゼクティブフェロー就任｜PR TIMES｜2026年8月25日</span><a href="https://prtimes.jp/main/html/rd/p/000000712.000045863.html" target="_blank" rel="noopener noreferrer">元マイクロソフト業務執行役員・北川裕康氏が、IDEATECHのエグゼクティブフェローに就任</a></li>
     </ul>
     <p class="method-notes">各回ともインターネット調査。対象取引には新規導入のほか、見直し・乗り換え・契約更新を含みます。延べ1,139名は各回の有効回答数の合計で、重複を除いた人数ではありません。対象条件が異なるため時系列比較はできません。日本のBtoB購買全体の代表値、生成AIによる因果効果、提言した施策の効果を示す調査ではありません。バイヤージャーニーの段階整理はIDEATECHによるものです。</p>
   </div>
@@ -840,32 +841,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 <footer class="foot">
   <div class="col">
     <div class="foot-block">
-      <h2>本件に関するお問い合わせ</h2>
-      <div class="contact-box">
-        <b>株式会社IDEATECH　担当：競 仁志</b>
-        TEL：050-1871-0555<br>
-        E-mail：<a href="mailto:kisou@ideatech.jp">kisou@ideatech.jp</a>
-      </div>
-    </div>
-    <div class="foot-block">
       <h2>会社概要</h2>
       <dl class="co">
         <dt>会社名</dt><dd>株式会社IDEATECH（アイデアテック）</dd>
-        <dt>代表者</dt><dd>代表取締役社長 石川友夫</dd>
-        <dt>所在地</dt><dd>〒107-0062 東京都港区南青山2丁目11番17号 第一法規ビル3階</dd>
-        <dt>設立</dt><dd>2010年2月</dd>
-        <dt>事業内容</dt>
-        <dd>
-          <ul>
-            <li class="grp">① IDEAコンテンツ事業</li>
-            <li>リサーチデータマーケティング「リサピー®」／レポートマーケティング「レポピー®」／ソートリーダーシップマーケティング「ハクピー®」／コラムマーケティング「コラピー®」／Q&amp;Aマーケティング「X-Questions®」</li>
-            <li class="grp">② IDEA PR事業</li>
-            <li>PR戦略コンサルティング「PR-GROWTH」／PR内製化支援「IDEA PR houseAI」／LLMO戦略コンサルティング「IDEA LLMO」</li>
-            <li class="grp">③ IDEAマーケティング事業　④ IDEAデザイン事業　⑤ IDEAセールス事業（コンテンツセールス®）　⑥ IDEAソリューションズ事業</li>
-            <li class="grp">⑦ IDEA AI事業</li>
-            <li>生成AI導入・運用支援研修／生成AI研修</li>
-          </ul>
-        </dd>
         <dt>URL</dt><dd><a href="https://ideatech.jp">https://ideatech.jp</a></dd>
       </dl>
     </div>
